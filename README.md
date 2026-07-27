@@ -67,6 +67,11 @@ See `scripts/composite.py` for full options and `AGENTS.md` for detailed guidanc
 | `credit-card-mockup` | Standalone dark navy EPD credit card |
 | `credit-card-wave` | Light-theme card with wave line |
 | `metrics-card-revenue` | Revenue-by-plan donut card |
+| `net-sales-breakdown` | Waterfall chart: Gross Sales, Discounts, Refunds, Chargebacks, Net Sales |
+| `retry-success` | Retry Success bar chart, Attempts #1-5 |
+| `average-order-value` | AOV line chart, YTD, with $50.27 headline |
+| `top-failure-reasons` | Horizontal bar chart of decline reasons |
+| `products-dashboard` | Full EPD Commerce Products page UI screenshot |
 
 All files at `https://brand.easypaydirect.com/assets/`.
 

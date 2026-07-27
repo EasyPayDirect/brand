@@ -67,6 +67,11 @@ See the docstring at the top of `scripts/composite.py` for full options.
 | `credit-card-mockup` | Standalone dark navy EPD credit card mockup. Rounded corners, chip, tap, cardholder name. |
 | `credit-card-wave` | Light-theme card + wave line + gradient. Best for lighter section backgrounds. |
 | `metrics-card-revenue` | Revenue-by-plan donut card on mid-blue. Best as a standalone data-viz element. |
+| `net-sales-breakdown` | Net Sales Breakdown waterfall chart (YTD). Light theme, blue positive + red/orange deduction bars. Use to show revenue math. |
+| `retry-success` | Retry Success bar chart across Attempts #1-5. Light theme, blue bars. Use for revenue recovery / retry logic pages. |
+| `average-order-value` | AOV line/area chart with big $50.27 headline. Light theme, blue area fill. Use for AOV / trending metrics. |
+| `top-failure-reasons` | Horizontal bar chart of decline reasons. Light theme. Use for decline analytics / chargeback reduction pages. |
+| `products-dashboard` | Full EPD Commerce Products page UI screenshot with sidebar, KPI cards, and product table. Use as a product-UI hero. |
 
 **Never draw or generate any of these graphics with an image model. Always composite from the real files.**
 

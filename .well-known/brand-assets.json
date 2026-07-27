@@ -124,6 +124,36 @@
       "role": "composite_source",
       "description": "Revenue-by-plan donut card on mid-blue. Best as a standalone data-viz element."
     },
+    "approved_graphic_net_sales_breakdown": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/net-sales-breakdown.png",
+      "composite_key": "net-sales-breakdown",
+      "role": "composite_source",
+      "description": "Net Sales Breakdown waterfall chart (YTD). Light theme. Blue positive bars, warm red/orange deduction bars for discounts/refunds/chargebacks, blue Net Sales final bar. Use on light pages to show financial breakdown or revenue math."
+    },
+    "approved_graphic_retry_success": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/retry-success.png",
+      "composite_key": "retry-success",
+      "role": "composite_source",
+      "description": "Retry Success bar chart (YTD) showing success rate across Attempt #1-5. Light theme, blue bars. Use for pages about revenue recovery, retry logic, or account updater features."
+    },
+    "approved_graphic_average_order_value": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/average-order-value.png",
+      "composite_key": "average-order-value",
+      "role": "composite_source",
+      "description": "Average Order Value line/area chart (YTD, Jan-Dec) with big $50.27 headline number. Light theme, blue area fill. Use for pages about AOV, trending metrics, or seasonal analytics."
+    },
+    "approved_graphic_top_failure_reasons": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/top-failure-reasons.png",
+      "composite_key": "top-failure-reasons",
+      "role": "composite_source",
+      "description": "Top Failure Reasons horizontal bar chart (YTD): Insufficient Funds, Card Declined, Expired Card, Card Reported Lost, Technical Error, Other. Light theme, blue bars. Use for pages about decline analytics, chargeback reduction, or risk mitigation."
+    },
+    "approved_graphic_products_dashboard": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/products-dashboard.png",
+      "composite_key": "products-dashboard",
+      "role": "composite_source",
+      "description": "Full EPD Commerce Products page UI screenshot. Left dark navy sidebar with nav items (Dashboard, Products, Landing Pages, etc.), main content area with 3 KPI cards (Total products, Product revenue, Product sold) and a product catalog table. Use as a product-UI reference or hero screenshot."
+    },
     "logo_white": {
       "url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.png",
       "svg_url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.svg",

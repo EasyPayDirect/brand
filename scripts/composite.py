@@ -63,6 +63,11 @@ APPROVED_GRAPHICS = {
     "credit-card-mockup": ASSETS / "approved-graphics" / "credit-card-mockup.png",
     "credit-card-wave": ASSETS / "approved-graphics" / "credit-card-wave.png",
     "metrics-card-revenue": ASSETS / "approved-graphics" / "metrics-card-revenue.png",
+    "net-sales-breakdown": ASSETS / "approved-graphics" / "net-sales-breakdown.png",
+    "retry-success": ASSETS / "approved-graphics" / "retry-success.png",
+    "average-order-value": ASSETS / "approved-graphics" / "average-order-value.png",
+    "top-failure-reasons": ASSETS / "approved-graphics" / "top-failure-reasons.png",
+    "products-dashboard": ASSETS / "approved-graphics" / "products-dashboard.png",
 }
 
 
