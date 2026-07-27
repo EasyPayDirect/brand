@@ -1,0 +1,6 @@
+# Jekyll config for GitHub Pages.
+# By default Jekyll excludes dotfiles and dot-directories, which means
+# .well-known/ (the IETF-standard path for machine-discoverable metadata)
+# would 404. This include list restores it.
+include:
+  - .well-known
