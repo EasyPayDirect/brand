@@ -12,14 +12,20 @@
     "full_guidelines_pdf_url": "https://brand.easypaydirect.com/docs/easy-pay-direct-brand-guidelines.pdf"
   },
   "colors": {
-    "primary": "#003C7E",
-    "interactive": "#006EE8",
-    "background_dark": "#000914",
-    "background_light": "#F5F6FA",
+    "__note__": "Colors are strictly role-based. Text on dark backgrounds is always the two lightest neutrals (#EBEDF6 or #D1D8E7). Never use a blue as text on a blue background. Never use #000914 as text on any dark surface.",
+    "hero_background": "#003C7E",
+    "deeper_surface": "#000914",
+    "light_background_primary": "#F5F6FA",
+    "light_background_alternate": "#EBEDF6",
+    "text_on_dark_primary": "#EBEDF6",
+    "text_on_dark_muted": "#D1D8E7",
+    "text_on_light_headline": "#000914",
+    "text_on_light_body": "#2A374F",
+    "text_on_light_muted": "#5273A4",
+    "link_interactive": "#006EE8",
+    "link_interactive_hover": "#0056BB",
     "cta_fill": "#3DDC73",
     "cta_text_on_fill": "#000914",
-    "text_dark_bg": "#D1D8E7",
-    "text_light_bg": "#2A374F",
     "border_light": "#EBEDF6",
     "border_dark": "#344B6F"
   },
@@ -35,76 +41,46 @@
     }
   },
   "assets": {
-    "__motif_note__": "EPD has TWO valid motif families. Both are canonical. Pick the one that matches the layout. If unsure, hero-family for hero graphics and central/vertical compositions; side-family for section edges, wide banners, and social crops that need a framed feel.",
+    "__motif_note__": "EPD has ONE motif family (nested rounded diamonds) with FOUR canonical placements. Always prefer the SVG source. The transparent PNG rasterizations exist as fallbacks for image models that only accept raster references.",
 
-    "motif_hero_on_navy": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-hero-on-navy.png",
-      "role": "composition_and_background_reference",
-      "family": "hero",
-      "description": "Concentric rounded-diamond outlines fading up from the bottom of a deep navy background. This is the homepage-hero motif family. Use for hero graphics, vertical compositions, and any layout where the motif reads as an anchor rising from the bottom.",
+    "motif_hero": {
+      "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-hero.svg",
+      "png_url": "https://brand.easypaydirect.com/assets/motif/motif-hero.png",
+      "variant": "A",
+      "role": "hero_composition_reference",
+      "description": "Concentric rounded-diamond outlines fading up from the bottom. Homepage-hero style.",
       "recommended_for": ["homepage hero", "tall vertical banners", "emails with a central subject", "9:16 social where copy sits above the motif"]
     },
-    "motif_hero_on_light": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-hero-on-light.png",
-      "role": "composition_reference_light",
-      "family": "hero",
-      "description": "Hero motif on a light neutral background. Very subtle overlay."
+    "motif_side_right": {
+      "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-right.svg",
+      "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-right.png",
+      "variant": "B",
+      "role": "section_edge_reference",
+      "description": "A single large nested rounded-diamond outline anchored to the RIGHT edge of a section, spilling in from the right.",
+      "recommended_for": ["section backgrounds where copy sits on the left", "testimonial sections", "1.91:1 wide banners", "blog headers"],
+      "live_example": "https://brand.easypaydirect.com/assets/examples/example-section-testimonials.png"
     },
-    "motif_hero_tile": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-hero-tile.png",
-      "role": "motif_source",
-      "family": "hero",
-      "description": "Hero motif on transparent, high resolution. Use as an overlay layer."
+    "motif_side_both": {
+      "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both.svg",
+      "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both.png",
+      "variant": "C",
+      "role": "symmetric_framing_reference",
+      "description": "Nested rounded-diamond outlines mirrored on BOTH left and right edges, framing content in the middle. Deepest-navy variant.",
+      "recommended_for": ["hero sections with centered content", "application form sections", "1:1 square social crops", "any layout where the motif frames symmetrically"],
+      "live_examples": [
+        "https://brand.easypaydirect.com/assets/examples/example-section-hero-with-phone.png",
+        "https://brand.easypaydirect.com/assets/examples/example-section-application-form.png",
+        "https://brand.easypaydirect.com/assets/examples/example-social-squares.png"
+      ]
     },
-    "motif_hero_svg": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-hero.svg",
-      "role": "motif_source_vector",
-      "family": "hero",
-      "description": "Hero motif as SVG. Use in design tools that support vector."
-    },
-
-    "motif_side_on_navy": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-side-on-navy.png",
-      "role": "composition_and_background_reference",
-      "family": "side",
-      "description": "Nested rounded-diamond outlines anchored to the RIGHT edge of a deep navy section. This is the section-edge motif family, used on the site between content sections. Use for wide banners, section backgrounds, and social crops where the motif frames the composition from an edge.",
-      "recommended_for": ["section backgrounds on site", "1:1 social with the motif on one side", "1.91:1 Meta banners", "blog headers"]
-    },
-    "motif_side_on_navy_left": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-side-on-navy-left.png",
-      "role": "composition_reference_left",
-      "family": "side",
-      "description": "Side motif mirrored to the LEFT edge of a deep navy section."
-    },
-    "motif_side_both_navy": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-side-both-navy.png",
-      "role": "composition_reference_symmetric",
-      "family": "side",
-      "description": "Side motif mirrored on BOTH edges of a square (1:1) navy panel. Use for square social crops that want the motif to frame the center."
-    },
-    "motif_side_on_light": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-side-on-light.png",
-      "role": "composition_reference_light",
-      "family": "side",
-      "description": "Side motif on the light neutral section background."
-    },
-    "motif_side_tile": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-side-tile.png",
-      "role": "motif_source",
-      "family": "side",
-      "description": "Side motif on transparent, high resolution. Use as an overlay layer."
-    },
-    "motif_side_svg_right": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-side-right.svg",
-      "role": "motif_source_vector_right",
-      "family": "side",
-      "description": "Side motif (right-facing) as SVG."
-    },
-    "motif_side_svg_left": {
-      "url": "https://brand.easypaydirect.com/assets/motif/motif-side-left.svg",
-      "role": "motif_source_vector_left",
-      "family": "side",
-      "description": "Side motif (left-facing, mirrored) as SVG."
+    "motif_side_both_on_brand_blue": {
+      "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.svg",
+      "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.png",
+      "variant": "D",
+      "role": "symmetric_framing_reference_brand_blue",
+      "description": "The both-edges variant tuned for the lighter #003C7E brand-blue section background. Use where the composition sits on brand blue rather than the deepest navy.",
+      "recommended_for": ["pricing sections", "feature callout sections", "any lighter-navy background section"],
+      "live_example": "https://brand.easypaydirect.com/assets/examples/example-section-pricing.png"
     },
     "logo_white": {
       "url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.png",
@@ -133,27 +109,45 @@
       "role": "positive_style_reference",
       "description": "Real easypaydirect.com homepage hero. Attach as a positive style reference for any marketing image on the site or a similar layout."
     },
+    "example_section_hero_with_phone": {
+      "url": "https://brand.easypaydirect.com/assets/examples/example-section-hero-with-phone.png",
+      "role": "positive_section_reference",
+      "description": "Real EPD hero section with phone mockup, showing the both-edges motif framing the content symmetrically."
+    },
+    "example_section_testimonials": {
+      "url": "https://brand.easypaydirect.com/assets/examples/example-section-testimonials.png",
+      "role": "positive_section_reference",
+      "description": "Real EPD testimonials section using the right-edge motif variant (variant B). Shows canonical wide-section treatment with the motif spilling in from the right."
+    },
+    "example_section_pricing": {
+      "url": "https://brand.easypaydirect.com/assets/examples/example-section-pricing.png",
+      "role": "positive_section_reference",
+      "description": "Real EPD pricing section on the lighter #003C7E brand blue with the both-edges variant D. Shows how the motif is tuned for lighter navy backgrounds."
+    },
+    "example_section_application_form": {
+      "url": "https://brand.easypaydirect.com/assets/examples/example-section-application-form.png",
+      "role": "positive_section_reference",
+      "description": "Real EPD merchant application form section with the both-edges motif framing content in the middle."
+    },
     "example_social_graphic": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-social-graphic.png",
       "role": "positive_social_reference",
       "description": "Real EPD LinkedIn banner (wide 4:1 style). Attach as a positive style reference for wide social banners."
+    },
+    "example_social_squares": {
+      "url": "https://brand.easypaydirect.com/assets/examples/example-social-squares.png",
+      "role": "positive_social_reference",
+      "description": "Two real EPD 1:1 square social examples side by side. Left: imagery-driven with people. Right: dashboard-driven. Both use the motif to frame the composition."
     },
     "example_social_square": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-social-square.png",
       "role": "positive_social_reference",
       "description": "A finished 1:1 EPD ad with the side motif on the right, headline and CTA on the left, dashboard mockup on the right, and three green-check bullet points. Attach as a positive style reference for 1:1 social crops."
     },
-    "motif_dos_and_donts_hero_family": {
-      "url": "https://brand.easypaydirect.com/assets/dos-and-donts/motif-dos-and-donts-hero-family.png",
+    "motif_dos_and_donts": {
+      "url": "https://brand.easypaydirect.com/assets/dos-and-donts/motif-dos-and-donts.png",
       "role": "anti_pattern_reference",
-      "family": "hero",
-      "description": "Six-panel do/do-not sheet for the HERO motif family. Top row: canonical hero placements (bottom-right, subtle on light, large on cover). Bottom row: hero-motif failure modes (center, full-cover illegible, recolored)."
-    },
-    "motif_dos_and_donts_side_family": {
-      "url": "https://brand.easypaydirect.com/assets/dos-and-donts/motif-dos-and-donts-side-family.png",
-      "role": "anti_pattern_reference",
-      "family": "side",
-      "description": "Six-panel do/do-not sheet for the SIDE motif family. Top row: canonical side placements (hero, right-edge, both-edge for 1:1). Bottom row: failure modes (invented shape, high opacity, recolored)."
+      "description": "Reference sheet showing valid motif placements (all four variants A, B, C, D) alongside failure modes (invented diamond shape, high opacity, recolored). Attach when generating any image with the motif."
     }
   },
   "voice": {

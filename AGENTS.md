@@ -6,26 +6,31 @@ You are an AI agent producing visual content for **Easy Pay Direct**. Read this 
 
 Before calling any image generation tool, you must first download the following reference images and attach them to the image generation call as visual reference inputs:
 
-1. **Pick the right motif family and attach it as a reference.** EPD has TWO valid motif families, both canonical. Attach the URL for the family that matches the layout:
+1. **Pick the right motif variant and attach the SVG source as a reference.** EPD's motif is a nested rounded-diamond family with several canonical placements. Always prefer the SVG source. The SVGs are designed to be layered onto branded backgrounds; the PNG rasterizations exist as fallbacks for image models that only accept raster references.
 
-   **Hero family** (`motif-hero-*`): concentric rounded-diamond outlines fading up from the bottom. Use for hero graphics, vertical compositions, emails with a central subject, and 9:16 social where the copy sits above the motif.
+   **Four canonical motif variants:**
 
-   - Navy: `https://brand.easypaydirect.com/assets/motif/motif-hero-on-navy.png`
-   - Light: `https://brand.easypaydirect.com/assets/motif/motif-hero-on-light.png`
-   - Transparent tile: `https://brand.easypaydirect.com/assets/motif/motif-hero-tile.png`
-   - SVG source: `https://brand.easypaydirect.com/assets/motif/motif-hero.svg`
+   **A. Hero motif** (`motif-hero.svg`) — concentric rounded-diamond outlines fading up from bottom.
+   - Use for: homepage hero graphics, tall vertical compositions, emails with a central subject, 9:16 social where copy sits above the motif.
+   - SVG: `https://brand.easypaydirect.com/assets/motif/motif-hero.svg`
+   - PNG (transparent, for compositing): `https://brand.easypaydirect.com/assets/motif/motif-hero.png`
 
-   **Side family** (`motif-side-*`): nested rounded-diamond outlines anchored to an edge. Use for section backgrounds, wide banners, blog headers, and social crops where the motif frames the composition from a side.
+   **B. Side, right edge** (`motif-side-right.svg`) — a single large nested rounded-diamond outline anchored to the right edge, spilling in.
+   - Use for: section backgrounds where copy sits on the left, testimonial sections, wide 1.91:1 banners, blog headers.
+   - SVG: `https://brand.easypaydirect.com/assets/motif/motif-side-right.svg`
+   - PNG (transparent): `https://brand.easypaydirect.com/assets/motif/motif-side-right.png`
 
-   - Right edge on navy: `https://brand.easypaydirect.com/assets/motif/motif-side-on-navy.png`
-   - Left edge on navy: `https://brand.easypaydirect.com/assets/motif/motif-side-on-navy-left.png`
-   - Both edges on navy (for 1:1 social): `https://brand.easypaydirect.com/assets/motif/motif-side-both-navy.png`
-   - Light section: `https://brand.easypaydirect.com/assets/motif/motif-side-on-light.png`
-   - Transparent tile: `https://brand.easypaydirect.com/assets/motif/motif-side-tile.png`
-   - SVG source (right): `https://brand.easypaydirect.com/assets/motif/motif-side-right.svg`
-   - SVG source (left): `https://brand.easypaydirect.com/assets/motif/motif-side-left.svg`
+   **C. Side, both edges** (`motif-side-both.svg`) — nested rounded-diamond outlines mirrored on both left and right edges, framing the composition.
+   - Use for: hero sections with content in the middle, application form sections, square (1:1) social crops where the composition is centered, any layout where the motif should frame content symmetrically.
+   - SVG: `https://brand.easypaydirect.com/assets/motif/motif-side-both.svg`
+   - PNG (transparent): `https://brand.easypaydirect.com/assets/motif/motif-side-both.png`
 
-   **If unsure which family to use:** hero for anything vertical or hero-shaped, side for anything horizontal or that needs an edge frame. Both are correct EPD. Never invent your own diamond shape.
+   **D. Side, both edges on brand blue** (`motif-side-both-on-brand-blue.svg`) — the both-edges variant tuned to sit on the lighter `#003C7E` brand-blue background instead of the deepest navy.
+   - Use for: pricing sections, feature callout sections, any lighter-navy section background (`#003C7E`) where the both-edges framing works.
+   - SVG: `https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.svg`
+   - PNG (transparent): `https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.png`
+
+   **Never invent your own diamond shape.** If your image model output shows any diamond that doesn't visibly match one of the four variants above, regenerate.
 
 2. `https://brand.easypaydirect.com/assets/examples/example-hero.png`
    Role: **style reference**. This is a real EPD homepage hero. Any marketing image you produce must feel like it belongs on the same site.
@@ -76,16 +81,14 @@ Any of these mean you have regressed to the fintech-stock training-set default. 
 
 **Motif placement rules (critical):**
 
-The motif is always a **background element**, never a subject. Choose family and placement based on the layout:
+The motif is always a **background element**, never a subject. Choose the variant based on the layout:
 
-- **Homepage-style hero, 9:16 vertical crops, tall banners with central subject:** use the **hero family**. The concentric diamonds sit at the bottom of the composition and fade up into the copy above.
-- **Section backgrounds on the site, wide banners, 1.91:1 Meta ads:** use the **side family**, right edge. This is the canonical section treatment.
-- **1:1 square social crops (Instagram, Google Display 1:1):** either family works. Side family on one edge if you have a dashboard or subject on the other side. Side family on both edges (`motif-side-both-navy.png`) if the composition is centered. Hero family works if the subject sits above the motif.
-- **Left-side mirror:** use `motif-side-on-navy-left.png` when the composition's content is stronger on the right.
+- **Homepage-style hero, 9:16 vertical crops, tall banners with a central subject:** use the **hero motif** (variant A). The concentric diamonds sit at the bottom of the composition and fade up into the copy above.
+- **Section backgrounds where copy is on one side and a subject on the other:** use the **side-right motif** (variant B). This is the canonical wide-section treatment. See `example-section-testimonials.png` in the examples folder for a real EPD implementation.
+- **Section backgrounds with content in the middle, application forms, symmetric compositions, 1:1 square social crops:** use the **both-edges motif** (variant C or D). See `example-section-hero-with-phone.png` and `example-section-application-form.png` for real implementations. See `example-social-squares.png` for two square social examples.
+- **Pricing sections and lighter-navy backgrounds (`#003C7E`):** use variant D specifically, which is tuned for the lighter background. See `example-section-pricing.png`.
 
-**Opacity:** always low (roughly 8-20%). Motif never at full opacity, never competing with copy.
-
-**Color:** motif follows the reference exactly. Never recolored to green, purple, or any other hue. Never made brighter or more saturated than the reference shows.
+**Opacity and color:** the SVG source files already contain the correct opacity and color treatments. Do not modify them. Do not recolor the motif to green, purple, or any other hue. Do not brighten or saturate it beyond what the source shows.
 
 ### If the user asks for a social graphic:
 Same as above, plus attach `example-social-graphic.png` as an additional style reference. For a square (1:1) crop, decide whether the motif goes on the left, right, or both edges based on which side better balances the composition with the copy and any imagery on the other side. Attach `motif-both-sides-navy.png` if using both edges.
@@ -120,7 +123,7 @@ Before returning the image to the user, you MUST run this checklist. The single 
 
 **2. Motif placement verification.** The motif should be a background texture at low opacity, anchored to a bottom or a side, never centered as the subject.
 
-**3. Color verification.** All colors approximately match the palette swatch. Deep navy background (#000914), off-white text, green CTA fill (#3DDC73) with dark navy text on the green.
+**3. Color verification.** All colors approximately match the palette swatch. Hero background is `#003C7E` (deep navy, brand blue), not the darker `#000914`. Text on that navy is one of the two lightest neutrals: `#EBEDF6` (primary) or `#D1D8E7` (muted). Never blue text on blue background. Never `#000914` as text on any dark surface. Green CTA fill is `#3DDC73` with `#000914` dark text on top.
 
 **4. Anti-pattern scan.** Is there any single large diamond as the focal subject? Any neon, glow, sci-fi UI, particle effect, holographic panel, robotic hand, currency symbol, or floating coin? If yes, regenerate.
 

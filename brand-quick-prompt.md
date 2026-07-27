@@ -10,9 +10,12 @@ For image generation specifically, this prompt is not enough on its own. Read `A
 
 Before calling any image generation tool, you must first attach the following reference images to the call:
 
-1. A motif reference. EPD has TWO valid motif families:
-   - **Hero family** (concentric rounded diamonds fading up from bottom): `https://brand.easypaydirect.com/assets/motif/motif-hero-on-navy.png`. Use for hero graphics and vertical compositions.
-   - **Side family** (nested outlines anchored to an edge): `https://brand.easypaydirect.com/assets/motif/motif-side-on-navy.png` (right edge, canonical), `motif-side-on-navy-left.png` (left edge), or `motif-side-both-navy.png` (both edges, for square social). Use for section backgrounds, wide banners, and social crops.
+1. A motif reference. Pick the variant that matches the layout:
+   - **Variant A, Hero** (concentric diamonds from bottom): `https://brand.easypaydirect.com/assets/motif/motif-hero.svg`. Homepage hero, tall vertical, 9:16 social.
+   - **Variant B, Side right** (single outline from right edge): `https://brand.easypaydirect.com/assets/motif/motif-side-right.svg`. Testimonial sections, wide 1.91:1 banners, blog headers.
+   - **Variant C, Side both edges** (mirrored, symmetric framing): `https://brand.easypaydirect.com/assets/motif/motif-side-both.svg`. Hero sections with centered content, application forms, 1:1 social.
+   - **Variant D, Side both on brand blue** (variant C for #003C7E backgrounds): `https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.svg`. Pricing sections, feature callouts on lighter navy.
+   PNG fallbacks live at the same paths with `.png` extension. Prefer SVG. Never invent your own diamond shape.
 2. `https://brand.easypaydirect.com/assets/examples/example-hero.png`, style reference
 3. `https://brand.easypaydirect.com/assets/palette/palette-swatch.png`, color reference
 
@@ -33,7 +36,18 @@ You are producing an Easy Pay Direct (EPD) asset. EPD is a B2B payment processin
 
 **CTAs (verbatim):** primary `Get Started`, secondary `Talk to a Specialist`.
 
-**Colors:** page bg `#000914` (dark) or `#F5F6FA` (light). Brand blue `#003C7E`. Interactive blue `#006EE8`. CTA green `#3DDC73` (primary buttons only, always dark navy `#000914` text on green). Body text on dark `#D1D8E7`. Body text on light `#2A374F`. Border `#EBEDF6` on light, `#344B6F` on dark. Tone-on-tone logo cards use brand blue `#003C7E` with the solid white logo mark, never gray. Bright blues `#48C6FF` `#00A8FF` `#008CFF` are gradient stops only — never flat fills, buttons, or backgrounds.
+**Colors (strict role rules).** Text on dark backgrounds is always the two lightest neutrals. Never use blue text on blue backgrounds. Never use `#000914` as text on any dark surface.
+
+- Hero / dark section background: `#003C7E`
+- Deeper surface (footer, gradient stops, deepest panels): `#000914`
+- Light background primary: `#F5F6FA`. Light background alternate: `#EBEDF6`
+- Text on dark: primary `#EBEDF6`, muted `#D1D8E7`
+- Text on light: headline `#000914`, body `#2A374F`, muted `#5273A4`
+- Link / interactive: `#006EE8` (hover `#0056BB`)
+- CTA fill: `#3DDC73`. CTA text sitting on the green fill: `#000914`
+- Border on light: `#EBEDF6`. Border on dark: `#344B6F`
+- Bright blues `#48C6FF` `#00A8FF` `#008CFF` are gradient stops only, never flat fills, buttons, or backgrounds
+- Tone-on-tone logo cards use `#003C7E` with the solid white logo mark, never gray
 
 **Type:** General Sans (headings and body, medium 500 weight, sentence case). DM Mono (labels, buttons, eyebrows, stats, UPPERCASE, letter-spacing +14%). DM Sans is the approved substitute for General Sans if unavailable. Only two typefaces total.
 

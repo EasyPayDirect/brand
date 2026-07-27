@@ -30,26 +30,16 @@ epd-brand/
 
 If this repo lives at `brand.easypaydirect.com`, the canonical URLs are:
 
-**Motif family: hero** (concentric rounded diamonds fading up from bottom)
+**Motif: four canonical variants** (SVG source is always preferred; PNGs are transparent-background fallbacks)
 
-| Asset | URL |
-|---|---|
-| Hero motif on navy | `https://brand.easypaydirect.com/assets/motif/motif-hero-on-navy.png` |
-| Hero motif on light | `https://brand.easypaydirect.com/assets/motif/motif-hero-on-light.png` |
-| Hero motif tile (transparent) | `https://brand.easypaydirect.com/assets/motif/motif-hero-tile.png` |
-| Hero motif SVG | `https://brand.easypaydirect.com/assets/motif/motif-hero.svg` |
+| Variant | Use for | SVG | PNG |
+|---|---|---|---|
+| **A. Hero** — concentric diamonds fading up from bottom | Homepage hero, tall vertical, 9:16 social | `motif/motif-hero.svg` | `motif/motif-hero.png` |
+| **B. Side, right edge** — single outline spilling in from right | Testimonial sections, wide 1.91:1 banners, blog headers | `motif/motif-side-right.svg` | `motif/motif-side-right.png` |
+| **C. Side, both edges** — mirrored, framing centered content | Hero sections with centered content, application forms, 1:1 social | `motif/motif-side-both.svg` | `motif/motif-side-both.png` |
+| **D. Side, both edges on brand blue** — variant C tuned for #003C7E | Pricing sections, feature callouts on lighter navy | `motif/motif-side-both-on-brand-blue.svg` | `motif/motif-side-both-on-brand-blue.png` |
 
-**Motif family: side** (nested outlines anchored to an edge)
-
-| Asset | URL |
-|---|---|
-| Side motif on navy, right edge (canonical) | `https://brand.easypaydirect.com/assets/motif/motif-side-on-navy.png` |
-| Side motif on navy, left edge (mirrored) | `https://brand.easypaydirect.com/assets/motif/motif-side-on-navy-left.png` |
-| Side motif on navy, both edges (for 1:1 social) | `https://brand.easypaydirect.com/assets/motif/motif-side-both-navy.png` |
-| Side motif on light | `https://brand.easypaydirect.com/assets/motif/motif-side-on-light.png` |
-| Side motif tile (transparent) | `https://brand.easypaydirect.com/assets/motif/motif-side-tile.png` |
-| Side motif SVG, right | `https://brand.easypaydirect.com/assets/motif/motif-side-right.svg` |
-| Side motif SVG, left | `https://brand.easypaydirect.com/assets/motif/motif-side-left.svg` |
+Full URLs prefix each with `https://brand.easypaydirect.com/assets/`. See real site sections using each variant in `assets/examples/`.
 
 **Logos, palette, typography, examples**
 
@@ -60,10 +50,14 @@ If this repo lives at `brand.easypaydirect.com`, the canonical URLs are:
 | Color palette (labeled swatch image) | `https://brand.easypaydirect.com/assets/palette/palette-swatch.png` |
 | Typography specimen | `https://brand.easypaydirect.com/assets/typography/typography-specimen.png` |
 | Example hero (positive style reference) | `https://brand.easypaydirect.com/assets/examples/example-hero.png` |
+| Real site section: hero with phone | `https://brand.easypaydirect.com/assets/examples/example-section-hero-with-phone.png` |
+| Real site section: testimonials | `https://brand.easypaydirect.com/assets/examples/example-section-testimonials.png` |
+| Real site section: pricing (on brand blue) | `https://brand.easypaydirect.com/assets/examples/example-section-pricing.png` |
+| Real site section: application form | `https://brand.easypaydirect.com/assets/examples/example-section-application-form.png` |
 | Example social graphic, wide banner | `https://brand.easypaydirect.com/assets/examples/example-social-graphic.png` |
-| Example social graphic, 1:1 square | `https://brand.easypaydirect.com/assets/examples/example-social-square.png` |
-| Motif do / do not sheet, hero family | `https://brand.easypaydirect.com/assets/dos-and-donts/motif-dos-and-donts-hero-family.png` |
-| Motif do / do not sheet, side family | `https://brand.easypaydirect.com/assets/dos-and-donts/motif-dos-and-donts-side-family.png` |
+| Example social graphics, two 1:1 squares | `https://brand.easypaydirect.com/assets/examples/example-social-squares.png` |
+| Example social graphic, 1:1 finished ad | `https://brand.easypaydirect.com/assets/examples/example-social-square.png` |
+| Motif do / do not sheet | `https://brand.easypaydirect.com/assets/dos-and-donts/motif-dos-and-donts.png` |
 | **Full brand guidelines PDF (for humans)** | `https://brand.easypaydirect.com/docs/easy-pay-direct-brand-guidelines.pdf` |
 | Machine manifest | `https://brand.easypaydirect.com/.well-known/brand-assets.json` |
 
