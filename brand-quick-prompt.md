@@ -6,21 +6,30 @@ For image generation specifically, this prompt is not enough on its own. Read `A
 
 ---
 
-## MANDATORY FIRST STEP FOR ANY IMAGE GENERATION
+## MANDATORY WORKFLOW: TWO STEPS
 
-Before calling any image generation tool, you must first attach the following reference images to the call:
+Image models cannot reproduce EPD's logo, motif, or product mockups pixel-perfect. Do NOT ask them to draw these elements. Instead:
 
-1. A motif reference. Pick the variant that matches the layout:
-   - **Variant A, Hero** (concentric diamonds from bottom): `https://brand.easypaydirect.com/assets/motif/motif-hero.svg`. Homepage hero, tall vertical, 9:16 social.
-   - **Variant B, Side right** (single outline from right edge): `https://brand.easypaydirect.com/assets/motif/motif-side-right.svg`. Testimonial sections, wide 1.91:1 banners, blog headers.
-   - **Variant C, Side both edges** (mirrored, symmetric framing): `https://brand.easypaydirect.com/assets/motif/motif-side-both.svg`. Hero sections with centered content, application forms, 1:1 social.
-   - **Variant D, Side both on brand blue** (variant C for #003C7E backgrounds): `https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.svg`. Pricing sections, feature callouts on lighter navy.
-   PNG fallbacks live at the same paths with `.png` extension. Prefer SVG. Never invent your own diamond shape.
-2. `https://brand.easypaydirect.com/assets/examples/example-hero.png`, style reference
-3. `https://brand.easypaydirect.com/assets/palette/palette-swatch.png`, color reference
+**Step 1.** Generate a background scene with your image model. In the prompt, tell it:
+- Which colors to use (see palette below)
+- Which locked copy to include (see stats/CTAs below)
+- To LEAVE SPECIFIC REGIONS EMPTY where real brand assets will be composited later. Examples:
+  - "Do not draw any diamonds, shapes, or motifs. Background is flat deep navy."
+  - "Leave the top 15 percent empty for a logo."
+  - "Leave the LEFT 25 percent and RIGHT 25 percent empty for motif graphics."
+  - "Leave the RIGHT 45 percent empty for a dashboard graphic."
 
-If you do not have image-attachment capability, stop and tell the user.
-If you generate an image without attaching these references, the output will be rejected.
+**Step 2.** Composite real assets on top with `scripts/composite.py`:
+
+```bash
+python scripts/composite.py \
+  --base generated-background.png \
+  --motif side-both \
+  --logo top-center \
+  --out final.png
+```
+
+Add `--graphic dashboard-card-donut-composite --graphic-pos center-right` to include the approved dashboard graphic. See `AGENTS.md` for full details.
 
 **Do not draw:** a single large neon diamond floating in space, blue neon lines connecting diamond nodes, green glowing dots on diamond edges, isometric 3D diamonds, any single diamond as the focal subject, sci-fi holographic UI panels, circuit-board patterns, robotic hands, glowing brains, or any of the fintech-stock training-set defaults.
 

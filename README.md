@@ -30,16 +30,45 @@ epd-brand/
 
 If this repo lives at `brand.easypaydirect.com`, the canonical URLs are:
 
-**Motif: four canonical variants** (SVG source is always preferred; PNGs are transparent-background fallbacks)
+## Workflow: generate blank, then composite
 
-| Variant | Use for | SVG | PNG |
-|---|---|---|---|
-| **A. Hero** — concentric diamonds fading up from bottom | Homepage hero, tall vertical, 9:16 social | `motif/motif-hero.svg` | `motif/motif-hero.png` |
-| **B. Side, right edge** — single outline spilling in from right | Testimonial sections, wide 1.91:1 banners, blog headers | `motif/motif-side-right.svg` | `motif/motif-side-right.png` |
-| **C. Side, both edges** — mirrored, framing centered content | Hero sections with centered content, application forms, 1:1 social | `motif/motif-side-both.svg` | `motif/motif-side-both.png` |
-| **D. Side, both edges on brand blue** — variant C tuned for #003C7E | Pricing sections, feature callouts on lighter navy | `motif/motif-side-both-on-brand-blue.svg` | `motif/motif-side-both-on-brand-blue.png` |
+Image models cannot reproduce logos, motifs, UI, or product mockups pixel-perfect. Instead of asking them to draw those elements, use this two-step workflow:
 
-Full URLs prefix each with `https://brand.easypaydirect.com/assets/`. See real site sections using each variant in `assets/examples/`.
+1. **Generate a background scene** with an image model, telling it NOT to draw the logo, motif, dashboards, or product mockups. Leave specific empty regions (top strip for logo, side edges for motif, content well for graphic).
+2. **Composite real brand assets on top** using `scripts/composite.py` in this repo.
+
+Example:
+
+```bash
+python scripts/composite.py \
+  --base generated-background.png \
+  --motif side-both \
+  --logo top-center \
+  --out final-ad.png
+```
+
+See `scripts/composite.py` for full options and `AGENTS.md` for detailed guidance.
+
+**Motif variants** (composite by name)
+
+| Variant | Use for | Files |
+|---|---|---|
+| `hero` | Homepage hero, 9:16 vertical, emails | `motif/motif-hero.svg` + `.png` |
+| `side-right` | Content on left, testimonial sections, wide banners | `motif/motif-side-right.svg` + `.png` |
+| `side-left` | Content on right | `motif/motif-side-left.svg` + `.png` |
+| `side-both` | Centered content, application forms, 1:1 social | `motif/motif-side-both.svg` + `.png` |
+| `side-right-on-brand-blue` | Pricing sections on `#003C7E` | `motif/motif-side-right-on-brand-blue.svg` + `.png` |
+
+**Approved graphics** (composite by name via `--graphic`)
+
+| Key | What it is |
+|---|---|
+| `dashboard-card-donut-composite` | Full dashboard mockup (revenue donut + product cards + credit card) |
+| `credit-card-mockup` | Standalone dark navy EPD credit card |
+| `credit-card-wave` | Light-theme card with wave line |
+| `metrics-card-revenue` | Revenue-by-plan donut card |
+
+All files at `https://brand.easypaydirect.com/assets/`.
 
 **Logos, palette, typography, examples**
 

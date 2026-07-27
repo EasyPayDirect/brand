@@ -40,32 +40,48 @@
       "weights_in_use": [400, 500]
     }
   },
+  "workflow": {
+    "__note__": "Generate the background scene with an image model, then composite real brand assets on top with scripts/composite.py. Image models cannot reproduce logos, motifs, UI, or product mockups pixel-perfect, so those elements must always be pasted from the source files. See AGENTS.md for full details.",
+    "steps": [
+      "Step 1: Generate a background scene with reserved empty regions. Tell the model NOT to draw logos, motifs, UI, or product mockups. Leave specific empty regions (top for logo, side edges for motif, content well for graphic).",
+      "Step 2: Run scripts/composite.py --base <generated-png> --motif <variant> --logo <position> [--graphic <key> --graphic-pos <position>] --out <final-png>"
+    ],
+    "composite_script_url": "https://raw.githubusercontent.com/EasyPayDirect/brand/main/scripts/composite.py"
+  },
   "assets": {
-    "__motif_note__": "EPD has ONE motif family (nested rounded diamonds) with FOUR canonical placements. Always prefer the SVG source. The transparent PNG rasterizations exist as fallbacks for image models that only accept raster references.",
+    "__motif_note__": "EPD's motif is a nested rounded-diamond family. It must always be pasted from the source files (SVG or transparent PNG) onto the background, never redrawn by an image model. Use scripts/composite.py in this repo to do that pasting. Never attach these files as references to an image model, because it will paraphrase the shape and break brand fidelity.",
 
     "motif_hero": {
       "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-hero.svg",
       "png_url": "https://brand.easypaydirect.com/assets/motif/motif-hero.png",
-      "variant": "A",
-      "role": "hero_composition_reference",
+      "composite_key": "hero",
+      "role": "composite_source",
       "description": "Concentric rounded-diamond outlines fading up from the bottom. Homepage-hero style.",
       "recommended_for": ["homepage hero", "tall vertical banners", "emails with a central subject", "9:16 social where copy sits above the motif"]
     },
     "motif_side_right": {
       "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-right.svg",
       "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-right.png",
-      "variant": "B",
-      "role": "section_edge_reference",
-      "description": "A single large nested rounded-diamond outline anchored to the RIGHT edge of a section, spilling in from the right.",
+      "composite_key": "side-right",
+      "role": "composite_source",
+      "description": "A single large nested rounded-diamond outline anchored to the RIGHT edge, spilling in from the right.",
       "recommended_for": ["section backgrounds where copy sits on the left", "testimonial sections", "1.91:1 wide banners", "blog headers"],
       "live_example": "https://brand.easypaydirect.com/assets/examples/example-section-testimonials.png"
+    },
+    "motif_side_left": {
+      "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-left.svg",
+      "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-left.png",
+      "composite_key": "side-left",
+      "role": "composite_source",
+      "description": "Nested rounded-diamond outlines anchored to the LEFT edge. Mirror of side-right, for compositions where content sits on the right.",
+      "recommended_for": ["section backgrounds where copy sits on the right", "wide banners with content on the right"]
     },
     "motif_side_both": {
       "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both.svg",
       "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both.png",
-      "variant": "C",
-      "role": "symmetric_framing_reference",
-      "description": "Nested rounded-diamond outlines mirrored on BOTH left and right edges, framing content in the middle. Deepest-navy variant.",
+      "composite_key": "side-both",
+      "role": "composite_source",
+      "description": "True symmetric motif: nested rounded-diamond outlines mirrored on BOTH left and right edges with a clean center gap for content.",
       "recommended_for": ["hero sections with centered content", "application form sections", "1:1 square social crops", "any layout where the motif frames symmetrically"],
       "live_examples": [
         "https://brand.easypaydirect.com/assets/examples/example-section-hero-with-phone.png",
@@ -73,14 +89,40 @@
         "https://brand.easypaydirect.com/assets/examples/example-social-squares.png"
       ]
     },
-    "motif_side_both_on_brand_blue": {
-      "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.svg",
-      "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-both-on-brand-blue.png",
-      "variant": "D",
-      "role": "symmetric_framing_reference_brand_blue",
-      "description": "The both-edges variant tuned for the lighter #003C7E brand-blue section background. Use where the composition sits on brand blue rather than the deepest navy.",
+    "motif_side_right_on_brand_blue": {
+      "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-side-right-on-brand-blue.svg",
+      "png_url": "https://brand.easypaydirect.com/assets/motif/motif-side-right-on-brand-blue.png",
+      "composite_key": "side-right-on-brand-blue",
+      "role": "composite_source",
+      "description": "Right-anchored motif tuned for the lighter #003C7E brand-blue section background.",
       "recommended_for": ["pricing sections", "feature callout sections", "any lighter-navy background section"],
       "live_example": "https://brand.easypaydirect.com/assets/examples/example-section-pricing.png"
+    },
+    "__approved_graphics_note__": "These are pre-approved brand graphics that MUST be composited from the source files, never generated by an image model. Use scripts/composite.py --graphic <key> to add one on top of a generated background.",
+
+    "approved_graphic_dashboard_card_donut_composite": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/dashboard-card-donut-composite.png",
+      "composite_key": "dashboard-card-donut-composite",
+      "role": "composite_source",
+      "description": "Full composite of revenue donut + product/subscription cards + credit card on transparent background. Best for wide banners with content on the left."
+    },
+    "approved_graphic_credit_card_mockup": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/credit-card-mockup.png",
+      "composite_key": "credit-card-mockup",
+      "role": "composite_source",
+      "description": "Standalone dark navy EPD credit card mockup with chip, tap indicator, and cardholder name."
+    },
+    "approved_graphic_credit_card_wave": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/credit-card-wave.png",
+      "composite_key": "credit-card-wave",
+      "role": "composite_source",
+      "description": "Light-theme card + wave line + gradient. Best for lighter section backgrounds."
+    },
+    "approved_graphic_metrics_card_revenue": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/metrics-card-revenue.png",
+      "composite_key": "metrics-card-revenue",
+      "role": "composite_source",
+      "description": "Revenue-by-plan donut card on mid-blue. Best as a standalone data-viz element."
     },
     "logo_white": {
       "url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.png",
