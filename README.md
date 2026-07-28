@@ -72,6 +72,7 @@ See `scripts/composite.py` for full options and `AGENTS.md` for detailed guidanc
 | `average-order-value` | AOV line chart, YTD, with $50.27 headline |
 | `top-failure-reasons` | Horizontal bar chart of decline reasons |
 | `products-dashboard` | Full EPD Commerce Products page UI screenshot |
+| `partnership-blueprint` | Blueprint diagram of Partner ↔ EPD with 4 labeled channels |
 
 All files at `https://brand.easypaydirect.com/assets/`.
 

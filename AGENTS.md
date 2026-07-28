@@ -72,6 +72,7 @@ See the docstring at the top of `scripts/composite.py` for full options.
 | `average-order-value` | AOV line/area chart with big $50.27 headline. Light theme, blue area fill. Use for AOV / trending metrics. |
 | `top-failure-reasons` | Horizontal bar chart of decline reasons. Light theme. Use for decline analytics / chargeback reduction pages. |
 | `products-dashboard` | Full EPD Commerce Products page UI screenshot with sidebar, KPI cards, and product table. Use as a product-UI hero. |
+| `partnership-blueprint` | Blueprint diagram: two EPD rounded-diamond nodes (Partner + Easy Pay Direct) connected by four labeled channels (Revenue share, Referrals, Co-marketing, Operations) on subtle grid. Use for partnership / integration / how-we-work pages. |
 
 **Never draw or generate any of these graphics with an image model. Always composite from the real files.**
 

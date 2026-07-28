@@ -68,6 +68,7 @@ APPROVED_GRAPHICS = {
     "average-order-value": ASSETS / "approved-graphics" / "average-order-value.png",
     "top-failure-reasons": ASSETS / "approved-graphics" / "top-failure-reasons.png",
     "products-dashboard": ASSETS / "approved-graphics" / "products-dashboard.png",
+    "partnership-blueprint": ASSETS / "approved-graphics" / "partnership-blueprint.png",
 }
 
 

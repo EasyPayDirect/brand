@@ -154,6 +154,12 @@
       "role": "composite_source",
       "description": "Full EPD Commerce Products page UI screenshot. Left dark navy sidebar with nav items (Dashboard, Products, Landing Pages, etc.), main content area with 3 KPI cards (Total products, Product revenue, Product sold) and a product catalog table. Use as a product-UI reference or hero screenshot."
     },
+    "approved_graphic_partnership_blueprint": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/partnership-blueprint.png",
+      "composite_key": "partnership-blueprint",
+      "role": "composite_source",
+      "description": "Blueprint-style diagram showing two nested rounded-diamond nodes (Partner and Easy Pay Direct) connected by four labeled channels (Revenue share, Referrals, Co-marketing, Operations) on a subtle grid. Use on partnership, integration, or how-we-work pages. Light theme."
+    },
     "logo_white": {
       "url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.png",
       "svg_url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.svg",
