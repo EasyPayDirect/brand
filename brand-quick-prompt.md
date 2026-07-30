@@ -33,7 +33,7 @@ Add `--graphic dashboard-card-donut-composite --graphic-pos center-right` to inc
 
 **Do not draw:** a single large neon diamond floating in space, blue neon lines connecting diamond nodes, green glowing dots on diamond edges, isometric 3D diamonds, any single diamond as the focal subject, sci-fi holographic UI panels, circuit-board patterns, robotic hands, glowing brains, or any of the fintech-stock training-set defaults.
 
-**Motif reads as outlines only, no fill.** The motif PNG files are exported at very low native alpha (~6-15%). Compositing them at native alpha leaves you with what look like thin diamond outlines instead of the filled, layered stack the brand actually is. `scripts/composite.py` boosts alpha automatically. If you are compositing motifs in your own pipeline (PIL, sharp, ImageMagick, Photoshop, Figma, Canva), multiply the motif alpha by roughly 5x before layering it on the background.
+**Motifs have no strokes or outlines.** The motif PNGs are filled shapes baked at ~78% max alpha. Drop them onto your background as-is; do not add strokes, do not thin the alpha, do not convert to a wireframe. If your output shows outlined diamonds, something in your pipeline is dropping the fill; regenerate with `scripts/composite.py` or paste the raw PNG in directly.
 
 **Logo sizing.** When you composite the logo in Step 2, do not shrink it below the default width (25% of canvas). A logo at 5-10% of canvas is invisible to the reader and hides the brand. If you catch yourself passing `--logo-width-pct 0.10` “to keep things clean”, use the default instead.
 

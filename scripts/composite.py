@@ -78,28 +78,15 @@ def load_rgba(path: Path) -> Image.Image:
     return Image.open(path).convert("RGBA")
 
 
-def composite_motif(base: Image.Image, motif_name: str, alpha_boost: float = 5.0) -> Image.Image:
+def composite_motif(base: Image.Image, motif_name: str) -> Image.Image:
     """Composite the chosen motif variant onto the base image, full canvas.
 
-    The source motif PNGs are exported at a very low native alpha (roughly 6-15%
-    max opacity) so they can be layered on any background. Compositing them
-    directly makes them nearly invisible, which reads as thin outlines rather
-    than the filled, layered diamond stack the brand actually is. We boost the
-    alpha channel before compositing so the fills are visible.
-
-    Do not raise alpha_boost above ~7.0; anything higher blows out the gradient
-    into flat blue blocks. If the motif still looks too faint at 5.0, the
-    background is probably too dark; lighten the base gradient, don't push the
-    motif alpha.
+    The motif PNGs are baked at ~78% max alpha so they render correctly in any
+    tool that reads them directly. No alpha boost is needed here.
     """
     if motif_name not in MOTIFS:
         raise ValueError(f"Unknown motif '{motif_name}'. Choices: {list(MOTIFS)}")
     motif = load_rgba(MOTIFS[motif_name])
-    # Boost alpha so the low-opacity source PNG reads on-canvas.
-    if alpha_boost and alpha_boost != 1.0:
-        r, g, b, a = motif.split()
-        a = a.point(lambda v: min(255, int(v * alpha_boost)))
-        motif = Image.merge("RGBA", (r, g, b, a))
     W, H = base.size
     # Scale motif to match base canvas while preserving aspect ratio (fit width)
     mw, mh = motif.size

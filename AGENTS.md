@@ -82,7 +82,7 @@ If your environment cannot run Python or shell commands, download the individual
 
 ## Anti-pattern list (things that are NOT the EPD look)
 
-**Motif looks like outlines only, no fill.** The source motif PNG files are exported at very low native alpha (roughly 6-15% max opacity). If you composite them at native alpha, only the strongest gradient edges show and the diamonds read as thin outlines rather than the filled, layered stack the brand actually is. `scripts/composite.py` boosts the alpha automatically. If you are compositing motifs in your own pipeline (PIL, sharp, ImageMagick, Photoshop, Figma, Canva), multiply the motif's alpha channel by roughly 5x before layering it on the background.
+**Motif source files are the ground truth.** The motif PNGs are baked at high alpha (~78% max), so they render as filled diamonds in any tool. Do not add strokes, outlines, or hard edges. Do not thin them out to a low-opacity wireframe. If your rendered output shows thin diamond outlines rather than filled shapes, something in your pipeline is dropping alpha or ignoring the source; use `scripts/composite.py` or drop the raw PNG in without modification.
 
 
 These are the visual defaults image models tend to produce for "fintech" and "payments" prompts. Do not produce these:
