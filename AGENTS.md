@@ -82,7 +82,7 @@ If your environment cannot run Python or shell commands, download the individual
 
 ## Anti-pattern list (things that are NOT the EPD look)
 
-A specific failure mode we have seen more than once: the model draws thin single-line diamond outlines across the entire background, edge to edge, sometimes with dark or black-ish strokes. This is wrong. The motif is a filled, layered diamond stack anchored to a corner, at low opacity, not an all-over line pattern. If your output looks like a light-blue grid of tilted-square outlines, you did not composite the real motif. Regenerate using `scripts/composite.py` with `--motif hero` or `--motif side-right`.
+**Motif looks like outlines only, no fill.** The source motif PNG files are exported at very low native alpha (roughly 6-15% max opacity). If you composite them at native alpha, only the strongest gradient edges show and the diamonds read as thin outlines rather than the filled, layered stack the brand actually is. `scripts/composite.py` boosts the alpha automatically. If you are compositing motifs in your own pipeline (PIL, sharp, ImageMagick, Photoshop, Figma, Canva), multiply the motif's alpha channel by roughly 5x before layering it on the background.
 
 
 These are the visual defaults image models tend to produce for "fintech" and "payments" prompts. Do not produce these:
