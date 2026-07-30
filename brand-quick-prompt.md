@@ -33,6 +33,10 @@ Add `--graphic dashboard-card-donut-composite --graphic-pos center-right` to inc
 
 **Do not draw:** a single large neon diamond floating in space, blue neon lines connecting diamond nodes, green glowing dots on diamond edges, isometric 3D diamonds, any single diamond as the focal subject, sci-fi holographic UI panels, circuit-board patterns, robotic hands, glowing brains, or any of the fintech-stock training-set defaults.
 
+**Also do not draw:** thin single-line diamond outlines tiled across the whole background (edge to edge, sometimes with dark or black-ish strokes). The motif is a filled, layered diamond stack anchored to a corner at low opacity, not an all-over outline pattern. If your output looks like a grid of tilted-square outlines, that is a hallucination and you must regenerate or fall back to `scripts/composite.py --motif hero`.
+
+**Logo sizing.** When you composite the logo in Step 2, do not shrink it below the default width (25% of canvas). A logo at 5-10% of canvas is invisible to the reader and hides the brand. If you catch yourself passing `--logo-width-pct 0.10` “to keep things clean”, use the default instead.
+
 ---
 
 ## Paste this into your agent

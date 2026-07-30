@@ -82,6 +82,9 @@ If your environment cannot run Python or shell commands, download the individual
 
 ## Anti-pattern list (things that are NOT the EPD look)
 
+A specific failure mode we have seen more than once: the model draws thin single-line diamond outlines across the entire background, edge to edge, sometimes with dark or black-ish strokes. This is wrong. The motif is a filled, layered diamond stack anchored to a corner, at low opacity, not an all-over line pattern. If your output looks like a light-blue grid of tilted-square outlines, you did not composite the real motif. Regenerate using `scripts/composite.py` with `--motif hero` or `--motif side-right`.
+
+
 These are the visual defaults image models tend to produce for "fintech" and "payments" prompts. Do not produce these:
 
 **Motif-specific anti-patterns:**
@@ -137,6 +140,8 @@ Do not ask the image model to draw the UI. Use the approved graphics from `asset
 ### If the user asks for anything containing the EPD logo:
 
 Never ask the image model to draw the logo. Generate the background with the top area empty, then composite the real logo with `--logo top-center` (or `top-left` / `top-right`).
+
+**Logo sizing.** Do not shrink the logo below the default 25% of canvas width unless you have a specific reason. The logo should read at a glance. If you catch yourself using `--logo-width-pct 0.10` or a similar tiny value “to keep things clean”, stop — you are hiding the brand. Use the defaults.
 
 ## Copy voice rules for any text you place in images
 
