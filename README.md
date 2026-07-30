@@ -73,6 +73,7 @@ See `scripts/composite.py` for full options and `AGENTS.md` for detailed guidanc
 | `top-failure-reasons` | Horizontal bar chart of decline reasons |
 | `products-dashboard` | Full EPD Commerce Products page UI screenshot |
 | `partnership-blueprint` | Blueprint diagram of Partner ↔ EPD with 4 labeled channels |
+| `epd-commerce-hero` | EPD Commerce mobile dashboard mockup (phone + floating cards) |
 
 All files at `https://brand.easypaydirect.com/assets/`.
 

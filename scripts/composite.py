@@ -69,6 +69,7 @@ APPROVED_GRAPHICS = {
     "top-failure-reasons": ASSETS / "approved-graphics" / "top-failure-reasons.png",
     "products-dashboard": ASSETS / "approved-graphics" / "products-dashboard.png",
     "partnership-blueprint": ASSETS / "approved-graphics" / "partnership-blueprint.png",
+    "epd-commerce-hero": ASSETS / "approved-graphics" / "epd-commerce-hero.png",
 }
 
 

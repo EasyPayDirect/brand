@@ -160,6 +160,12 @@
       "role": "composite_source",
       "description": "Blueprint-style diagram showing two nested rounded-diamond nodes (Partner and Easy Pay Direct) connected by four labeled channels (Revenue share, Referrals, Co-marketing, Operations) on a subtle grid. Use on partnership, integration, or how-we-work pages. Light theme."
     },
+    "approved_graphic_epd_commerce_hero": {
+      "url": "https://brand.easypaydirect.com/assets/approved-graphics/epd-commerce-hero.png",
+      "composite_key": "epd-commerce-hero",
+      "role": "composite_source",
+      "description": "EPD Commerce mobile dashboard mockup. Phone showing the Dashboard view with Net revenue, Products sold, and Revenue chart, plus floating Sales and New subscriptions cards. Light theme, transparent-friendly background. Use on EPD Commerce product pages, launch collateral, and any creative that needs to show the mobile app UI."
+    },
     "logo_white": {
       "url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.png",
       "svg_url": "https://brand.easypaydirect.com/assets/logo/epd-logo-white.svg",

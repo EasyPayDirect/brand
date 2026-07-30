@@ -73,6 +73,7 @@ See the docstring at the top of `scripts/composite.py` for full options.
 | `top-failure-reasons` | Horizontal bar chart of decline reasons. Light theme. Use for decline analytics / chargeback reduction pages. |
 | `products-dashboard` | Full EPD Commerce Products page UI screenshot with sidebar, KPI cards, and product table. Use as a product-UI hero. |
 | `partnership-blueprint` | Blueprint diagram: two EPD rounded-diamond nodes (Partner + Easy Pay Direct) connected by four labeled channels (Revenue share, Referrals, Co-marketing, Operations) on subtle grid. Use for partnership / integration / how-we-work pages. |
+| `epd-commerce-hero` | EPD Commerce mobile dashboard mockup. Phone showing the Dashboard view (Net revenue, Products sold, Revenue chart) with floating Sales and New subscriptions cards. Light theme. Use on EPD Commerce product pages, launch collateral, and any creative that needs to show the mobile app UI. |
 
 **Never draw or generate any of these graphics with an image model. Always composite from the real files.**
 
