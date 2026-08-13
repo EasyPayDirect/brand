@@ -179,3 +179,18 @@ Before returning the image to the user, you MUST run this checklist. The single 
 ## Machine-readable manifest
 
 Every asset in this repo is listed with role and URL in `.well-known/brand-assets.json`. If you support auto-discovery, fetch that first.
+
+## EPD Commerce feature images (for cross-brand blog posts)
+
+When easypaydirect.com publishes a blog about an EPD Commerce feature, use real product screenshots from this repo's `assets/epd-commerce-features/<slug>/` folder. Never generate synthetic product UI.
+
+**The workflow:**
+
+1. Identify the feature slug from the release (e.g. "The Data Professor" → `data-professor`).
+2. Read the feature's manifest from the EPD Commerce brand repo at `https://raw.githubusercontent.com/EasyPayDirect/epd-commerce-brand/main/messaging-kit/features/<slug>.md`. This has canonical spelling, one-liner, and the `images:` frontmatter block with alt text, captions, and placement rules.
+3. Load the raw image files from this repo (Easy Pay Direct) at `assets/epd-commerce-features/<slug>/`. The files here are identical to the EPD Commerce repo — mirror only.
+4. Follow the placement, orientation, and cap rules in the manifest. See `assets/epd-commerce-features/README.md`.
+
+**Cap:** 1 hero + max 3 body images per post. Distribute evenly across sections. Never stack at top or bottom. Never inside the intro paragraph.
+
+**When there is no manifest:** the feature is not shipped or not documented. Run the blog text-only with the standard programmatic header. Do not fill with generic imagery.
