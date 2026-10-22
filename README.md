@@ -19,7 +19,7 @@ epd-brand/
 │  └─ brand-assets.json         # Machine-readable manifest of every asset
 └─ assets/
    ├─ motif/                    # Diamond motif (hero family + side family), on navy, light, and transparent
-   ├─ logo/                     # EPD logo lockups (white, dark, SVG + PNG)
+   ├─ logo/                     # Logo lockups (white, dark, SVG + PNG) and square mark on white
    ├─ palette/                  # Labeled color palette as a single image
    ├─ typography/               # Font pairing specimen
    ├─ examples/                 # Real EPD hero + social graphics as style references
@@ -83,6 +83,7 @@ All files at `https://brand.easypaydirect.com/assets/`.
 |---|---|
 | EPD logo (white, for dark backgrounds) | `https://brand.easypaydirect.com/assets/logo/epd-logo-white.png` |
 | EPD logo (navy, for light backgrounds) | `https://brand.easypaydirect.com/assets/logo/epd-logo-dark.png` |
+| Easy Pay Direct mark, square on white (profile pictures, app icons) | `https://brand.easypaydirect.com/assets/logo/easy-pay-direct-mark-square-white.png` |
 | Color palette (labeled swatch image) | `https://brand.easypaydirect.com/assets/palette/palette-swatch.png` |
 | Typography specimen | `https://brand.easypaydirect.com/assets/typography/typography-specimen.png` |
 | Example hero (positive style reference) | `https://brand.easypaydirect.com/assets/examples/example-hero.png` |
