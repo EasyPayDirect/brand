@@ -1,10 +1,10 @@
-# AGENTS.md — Instructions for AI Agents
+# AGENTS.md: Instructions for AI Agents
 
 You are an AI agent producing visual content for **Easy Pay Direct**. Read this file completely before generating anything. If you skip these instructions, the output will not match the brand and will be rejected.
 
 ## MANDATORY WORKFLOW: GENERATE BLANK, THEN COMPOSITE
 
-Image models cannot reproduce logos, motifs, UI, or product mockups pixel-perfectly. They paraphrase visual references, which breaks brand fidelity every time. The correct workflow for any EPD marketing image is TWO steps:
+Image models cannot reproduce logos, motifs, UI, or product mockups pixel-perfectly. They paraphrase visual references, which breaks brand fidelity every time. The correct workflow for any Easy Pay Direct marketing image is TWO steps:
 
 ### Step 1: Generate the background scene with reserved empty regions
 
@@ -16,7 +16,7 @@ Call your image model with a prompt that:
   - "Leave the top 15 percent empty for a logo to be composited later."
   - "Leave the LEFT 25 percent and RIGHT 25 percent completely empty for motif graphics."
   - "Leave the RIGHT 45 percent empty (flat navy) for a dashboard graphic."
-- Does NOT ask the model to draw the EPD logo, the motif, a specific dashboard, a specific product mockup, or any other pixel-critical brand asset.
+- Does NOT ask the model to draw the Easy Pay Direct logo, the motif, a specific dashboard, a specific product mockup, or any other pixel-critical brand asset.
 
 Refer to the `example-*.png` files in `assets/examples/` for style, atmosphere, and typography ONLY. Do not attach the motif or logo files as references at this step, because it invites the model to redraw them.
 
@@ -64,7 +64,7 @@ See the docstring at the top of `scripts/composite.py` for full options.
 | Graphic name (pass to `--graphic`) | What it is |
 |---|---|
 | `dashboard-card-donut-composite` | Full composite of revenue donut + product/subscription cards + credit card, on transparent background. Best for wide banners with content on the left. |
-| `credit-card-mockup` | Standalone dark navy EPD credit card mockup. Rounded corners, chip, tap, cardholder name. |
+| `credit-card-mockup` | Standalone dark navy Easy Pay Direct credit card mockup. Rounded corners, chip, tap, cardholder name. |
 | `credit-card-wave` | Light-theme card + wave line + gradient. Best for lighter section backgrounds. |
 | `metrics-card-revenue` | Revenue-by-plan donut card on mid-blue. Best as a standalone data-viz element. |
 | `net-sales-breakdown` | Net Sales Breakdown waterfall chart (YTD). Light theme, blue positive + red/orange deduction bars. Use to show revenue math. |
@@ -72,7 +72,7 @@ See the docstring at the top of `scripts/composite.py` for full options.
 | `average-order-value` | AOV line/area chart with big $50.27 headline. Light theme, blue area fill. Use for AOV / trending metrics. |
 | `top-failure-reasons` | Horizontal bar chart of decline reasons. Light theme. Use for decline analytics / chargeback reduction pages. |
 | `products-dashboard` | Full EPD Commerce Products page UI screenshot with sidebar, KPI cards, and product table. Use as a product-UI hero. |
-| `partnership-blueprint` | Blueprint diagram: two EPD rounded-diamond nodes (Partner + Easy Pay Direct) connected by four labeled channels (Revenue share, Referrals, Co-marketing, Operations) on subtle grid. Use for partnership / integration / how-we-work pages. |
+| `partnership-blueprint` | Blueprint diagram: two Easy Pay Direct rounded-diamond nodes (Partner + Easy Pay Direct) connected by four labeled channels (Revenue share, Referrals, Co-marketing, Operations) on subtle grid. Use for partnership / integration / how-we-work pages. |
 | `epd-commerce-hero` | EPD Commerce mobile dashboard mockup. Phone showing the Dashboard view (Net revenue, Products sold, Revenue chart) with floating Sales and New subscriptions cards. Light theme. Use on EPD Commerce product pages, launch collateral, and any creative that needs to show the mobile app UI. |
 
 **Never draw or generate any of these graphics with an image model. Always composite from the real files.**
@@ -81,7 +81,7 @@ See the docstring at the top of `scripts/composite.py` for full options.
 
 If your environment cannot run Python or shell commands, download the individual asset URLs and composite them yourself using any layered image editor (Photoshop, Figma, Canva) or any programmatic image library (PIL, sharp, ImageMagick, canvas). The rule is the same: the logo, motif, and any approved graphic must be pasted pixel-perfect from the source files, not re-drawn by an image model.
 
-## Anti-pattern list (things that are NOT the EPD look)
+## Anti-pattern list (things that are NOT the Easy Pay Direct look)
 
 **Motif source files are the ground truth.** The motif PNGs are baked at high alpha (~78% max), so they render as filled diamonds in any tool. Do not add strokes, outlines, or hard edges. Do not thin them out to a low-opacity wireframe. If your rendered output shows thin diamond outlines rather than filled shapes, something in your pipeline is dropping alpha or ignoring the source; use `scripts/composite.py` or drop the raw PNG in without modification.
 
@@ -138,11 +138,11 @@ Add `--graphic dashboard-card-donut-composite` (or one of the other approved gra
 
 Do not ask the image model to draw the UI. Use the approved graphics from `assets/approved-graphics/`. If none of them fit, ask the user for an approved screenshot rather than letting the model hallucinate one.
 
-### If the user asks for anything containing the EPD logo:
+### If the user asks for anything containing the Easy Pay Direct logo:
 
 Never ask the image model to draw the logo. Generate the background with the top area empty, then composite the real logo with `--logo top-center` (or `top-left` / `top-right`).
 
-**Logo sizing.** Do not shrink the logo below the default 25% of canvas width unless you have a specific reason. The logo should read at a glance. If you catch yourself using `--logo-width-pct 0.10` or a similar tiny value “to keep things clean”, stop — you are hiding the brand. Use the defaults.
+**Logo sizing.** Do not shrink the logo below the default 25% of canvas width unless you have a specific reason. The logo should read at a glance. If you catch yourself using `--logo-width-pct 0.10` or a similar tiny value “to keep things clean”, stop. You are hiding the brand. Use the defaults.
 
 ## Copy voice rules for any text you place in images
 
@@ -152,17 +152,19 @@ Never ask the image model to draw the logo. Generate the background with the top
 - Short declarative sentences.
 - CTAs are locked: "Get Started" (primary), "Talk to a Specialist" (secondary).
 - Never say "AI runs the mechanics of your business" (retired positioning).
-- When quoting stats, use the locked forms: "100k Merchants Helped", "13+ Years", "500+ Integrations", "$12B+ Processed".
+- When quoting stats, use the locked forms: "100k Merchants Helped", "13+ Years", "500+ Integrations", "Billions Processed".
+- Volume is always "Billions Processed". Never a dollar figure such as "$12B+" (retired).
+- Always write "Easy Pay Direct" in full. Never abbreviate it to "EPD". "EPD" only appears inside the logo mark and in "EPD Commerce", which is a separate brand.
 
 ## Templates over generation, where possible
 
 If the task is a paid Google or Meta ad that will be up for weeks and represent the brand to strangers, prefer a template-based assembly (drop copy into a pre-designed Figma template) over generative imagery. Generative imagery is fine for one-off social content and internal materials. It is not the right tool for high-stakes paid creative.
 
-If you have access to EPD Figma templates, use those instead of generating from scratch.
+If you have access to Easy Pay Direct Figma templates, use those instead of generating from scratch.
 
 ## After you generate: MANDATORY self-verification
 
-Before returning the image to the user, you MUST run this checklist. The single most important check is #1, because this is exactly where prior EPD image generations have failed: the model attaches the reference, ignores it, invents a plausible-looking diamond shape, and ships. Do not let that happen.
+Before returning the image to the user, you MUST run this checklist. The single most important check is #1, because this is exactly where prior Easy Pay Direct image generations have failed: the model attaches the reference, ignores it, invents a plausible-looking diamond shape, and ships. Do not let that happen.
 
 **1. Motif shape verification.** Open the reference image you attached. Open the image you just generated. Compare the motif geometry directly. The diamond shape in your output must visibly match the shape in the reference: same silhouette, same corner rounding, same nesting or stacking pattern, same edge anchoring. If the diamonds in your output are a different shape (e.g. neon outlines, single glowing diamond, sci-fi geometric shapes, floating chevrons, thin-stroke wireframes, isometric 3D, or anything that looks like an image-model default), you FAILED to use the reference. Regenerate with the reference more explicitly cited in the prompt, or fall back to compositing the motif PNG on top of the output.
 
@@ -186,9 +188,9 @@ When easypaydirect.com publishes a blog about an EPD Commerce feature, use real 
 
 **The workflow:**
 
-1. Identify the feature slug from the release (e.g. "The Data Professor" → `data-professor`).
+1. Identify the feature slug from the release (e.g. "The Professor" → `the-professor`).
 2. Read the feature's manifest from the EPD Commerce brand repo at `https://raw.githubusercontent.com/EasyPayDirect/epd-commerce-brand/main/messaging-kit/features/<slug>.md`. This has canonical spelling, one-liner, and the `images:` frontmatter block with alt text, captions, and placement rules.
-3. Load the raw image files from this repo (Easy Pay Direct) at `assets/epd-commerce-features/<slug>/`. The files here are identical to the EPD Commerce repo — mirror only.
+3. Load the raw image files from this repo (Easy Pay Direct) at `assets/epd-commerce-features/<slug>/`. The files here are identical to the EPD Commerce repo, mirror only.
 4. Follow the placement, orientation, and cap rules in the manifest. See `assets/epd-commerce-features/README.md`.
 
 **Cap:** 1 hero + max 3 body images per post. Distribute evenly across sections. Never stack at top or bottom. Never inside the intro paragraph.

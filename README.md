@@ -1,10 +1,10 @@
 # Easy Pay Direct Brand Assets
 
-This repository is the single source of truth for the Easy Pay Direct visual brand system. It exists so that any human or AI agent producing visual content for the EPD brand can pull the exact same reference assets from a stable public URL.
+This repository is the single source of truth for the Easy Pay Direct visual brand system. It exists so that any human or AI agent producing visual content for the Easy Pay Direct brand can pull the exact same reference assets from a stable public URL.
 
 If you are an **AI assistant** asked to produce visual content for Easy Pay Direct, read [`AGENTS.md`](./AGENTS.md) first. It tells you exactly which files to attach to your image-generation call before you generate anything.
 
-If you are a **human designer, affiliate partner, or vendor**, you can use everything in this repo directly. Assets are free to use in any EPD-affiliated marketing, ads, or content, as long as they are used according to the placement and treatment rules in the brand guidelines PDF.
+If you are a **human designer, affiliate partner, or vendor**, you can use everything in this repo directly. Assets are free to use in any Easy Pay Direct-affiliated marketing, ads, or content, as long as they are used according to the placement and treatment rules in the brand guidelines PDF.
 
 ## What's here
 
@@ -12,7 +12,7 @@ If you are a **human designer, affiliate partner, or vendor**, you can use every
 epd-brand/
 ├─ AGENTS.md                    # Rules for AI agents (read this first)
 ├─ brand-quick-prompt.md        # Copy-pasteable brand system prompt (~500 tokens)
-├─ HOW-TO-PUBLISH.md            # For the EPD team: publishing and updating this repo
+├─ HOW-TO-PUBLISH.md            # For the Easy Pay Direct team: publishing and updating this repo
 ├─ docs/
 │  └─ easy-pay-direct-brand-guidelines.pdf   # Full brand guide (for humans)
 ├─ .well-known/
@@ -22,7 +22,7 @@ epd-brand/
    ├─ logo/                     # Logo lockups (white, dark, SVG + PNG) and square mark on white
    ├─ palette/                  # Labeled color palette as a single image
    ├─ typography/               # Font pairing specimen
-   ├─ examples/                 # Real EPD hero + social graphics as style references
+   ├─ examples/                 # Real Easy Pay Direct hero + social graphics as style references
    └─ dos-and-donts/            # Motif do / do not visual sheets for both families
 ```
 
@@ -64,7 +64,7 @@ See `scripts/composite.py` for full options and `AGENTS.md` for detailed guidanc
 | Key | What it is |
 |---|---|
 | `dashboard-card-donut-composite` | Full dashboard mockup (revenue donut + product cards + credit card) |
-| `credit-card-mockup` | Standalone dark navy EPD credit card |
+| `credit-card-mockup` | Standalone dark navy Easy Pay Direct credit card |
 | `credit-card-wave` | Light-theme card with wave line |
 | `metrics-card-revenue` | Revenue-by-plan donut card |
 | `net-sales-breakdown` | Waterfall chart: Gross Sales, Discounts, Refunds, Chargebacks, Net Sales |
@@ -72,7 +72,7 @@ See `scripts/composite.py` for full options and `AGENTS.md` for detailed guidanc
 | `average-order-value` | AOV line chart, YTD, with $50.27 headline |
 | `top-failure-reasons` | Horizontal bar chart of decline reasons |
 | `products-dashboard` | Full EPD Commerce Products page UI screenshot |
-| `partnership-blueprint` | Blueprint diagram of Partner ↔ EPD with 4 labeled channels |
+| `partnership-blueprint` | Blueprint diagram of Partner ↔ Easy Pay Direct with 4 labeled channels |
 | `epd-commerce-hero` | EPD Commerce mobile dashboard mockup (phone + floating cards) |
 
 All files at `https://brand.easypaydirect.com/assets/`.
@@ -81,8 +81,8 @@ All files at `https://brand.easypaydirect.com/assets/`.
 
 | Asset | URL |
 |---|---|
-| EPD logo (white, for dark backgrounds) | `https://brand.easypaydirect.com/assets/logo/epd-logo-white.png` |
-| EPD logo (navy, for light backgrounds) | `https://brand.easypaydirect.com/assets/logo/epd-logo-dark.png` |
+| Easy Pay Direct logo (white, for dark backgrounds) | `https://brand.easypaydirect.com/assets/logo/epd-logo-white.png` |
+| Easy Pay Direct logo (navy, for light backgrounds) | `https://brand.easypaydirect.com/assets/logo/epd-logo-dark.png` |
 | Easy Pay Direct mark, square on white (profile pictures, app icons) | `https://brand.easypaydirect.com/assets/logo/easy-pay-direct-mark-square-white.png` |
 | Color palette (labeled swatch image) | `https://brand.easypaydirect.com/assets/palette/palette-swatch.png` |
 | Typography specimen | `https://brand.easypaydirect.com/assets/typography/typography-specimen.png` |
@@ -110,4 +110,4 @@ For asset requests, corrections, or questions, contact `directorofmarketing@easy
 
 ## License
 
-These assets are copyright Easy Pay Direct. Free for use in EPD-affiliated marketing, ads, and content. Not licensed for use by unaffiliated parties.
+These assets are copyright Easy Pay Direct. Free for use in Easy Pay Direct-affiliated marketing, ads, and content. Not licensed for use by unaffiliated parties.

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "brand": {
     "name": "Easy Pay Direct",
-    "short_name": "EPD",
+    "short_name": "Easy Pay Direct",
     "website": "https://easypaydirect.com",
-    "description": "Payment processing infrastructure for over 100,000 merchants across 13+ years.",
+    "description": "Payment processing for 100k merchants helped, 13+ years, and billions processed. Always written Easy Pay Direct in full, never EPD.",
     "guidelines_url": "https://brand.easypaydirect.com/README.md",
     "agent_instructions_url": "https://brand.easypaydirect.com/AGENTS.md",
     "quick_prompt_url": "https://brand.easypaydirect.com/brand-quick-prompt.md",
@@ -56,7 +56,7 @@
     "composite_script_url": "https://raw.githubusercontent.com/EasyPayDirect/brand/main/scripts/composite.py"
   },
   "assets": {
-    "__motif_note__": "EPD's motif is a nested rounded-diamond family. It must always be pasted from the source files (SVG or transparent PNG) onto the background, never redrawn by an image model. Use scripts/composite.py in this repo to do that pasting. Never attach these files as references to an image model, because it will paraphrase the shape and break brand fidelity.",
+    "__motif_note__": "Easy Pay Direct's motif is a nested rounded-diamond family. It must always be pasted from the source files (SVG or transparent PNG) onto the background, never redrawn by an image model. Use scripts/composite.py in this repo to do that pasting. Never attach these files as references to an image model, because it will paraphrase the shape and break brand fidelity.",
     "motif_hero": {
       "svg_url": "https://brand.easypaydirect.com/assets/motif/motif-hero.svg",
       "png_url": "https://brand.easypaydirect.com/assets/motif/motif-hero.png",
@@ -137,7 +137,7 @@
       "url": "https://brand.easypaydirect.com/assets/approved-graphics/credit-card-mockup.png",
       "composite_key": "credit-card-mockup",
       "role": "composite_source",
-      "description": "Standalone dark navy EPD credit card mockup with chip, tap indicator, and cardholder name."
+      "description": "Standalone dark navy Easy Pay Direct credit card mockup with chip, tap indicator, and cardholder name."
     },
     "approved_graphic_credit_card_wave": {
       "url": "https://brand.easypaydirect.com/assets/approved-graphics/credit-card-wave.png",
@@ -213,7 +213,7 @@
     "palette_swatch": {
       "url": "https://brand.easypaydirect.com/assets/palette/palette-swatch.png",
       "role": "color_reference",
-      "description": "Labeled palette image. Attach to any image generation call so the model matches actual EPD colors."
+      "description": "Labeled palette image. Attach to any image generation call so the model matches actual Easy Pay Direct colors."
     },
     "typography_specimen": {
       "url": "https://brand.easypaydirect.com/assets/typography/typography-specimen.png",
@@ -228,37 +228,37 @@
     "example_section_hero_with_phone": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-section-hero-with-phone.png",
       "role": "positive_section_reference",
-      "description": "Real EPD hero section with phone mockup, showing the both-edges motif framing the content symmetrically."
+      "description": "Real Easy Pay Direct hero section with phone mockup, showing the both-edges motif framing the content symmetrically."
     },
     "example_section_testimonials": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-section-testimonials.png",
       "role": "positive_section_reference",
-      "description": "Real EPD testimonials section using the right-edge motif variant (variant B). Shows canonical wide-section treatment with the motif spilling in from the right."
+      "description": "Real Easy Pay Direct testimonials section using the right-edge motif variant (variant B). Shows canonical wide-section treatment with the motif spilling in from the right."
     },
     "example_section_pricing": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-section-pricing.png",
       "role": "positive_section_reference",
-      "description": "Real EPD pricing section on the lighter #003C7E brand blue with the both-edges variant D. Shows how the motif is tuned for lighter navy backgrounds."
+      "description": "Real Easy Pay Direct pricing section on the lighter #003C7E brand blue with the both-edges variant D. Shows how the motif is tuned for lighter navy backgrounds."
     },
     "example_section_application_form": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-section-application-form.png",
       "role": "positive_section_reference",
-      "description": "Real EPD merchant application form section with the both-edges motif framing content in the middle."
+      "description": "Real Easy Pay Direct merchant application form section with the both-edges motif framing content in the middle."
     },
     "example_social_graphic": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-social-graphic.png",
       "role": "positive_social_reference",
-      "description": "Real EPD LinkedIn banner (wide 4:1 style). Attach as a positive style reference for wide social banners."
+      "description": "Real Easy Pay Direct LinkedIn banner (wide 4:1 style). Attach as a positive style reference for wide social banners."
     },
     "example_social_squares": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-social-squares.png",
       "role": "positive_social_reference",
-      "description": "Two real EPD 1:1 square social examples side by side. Left: imagery-driven with people. Right: dashboard-driven. Both use the motif to frame the composition."
+      "description": "Two real Easy Pay Direct 1:1 square social examples side by side. Left: imagery-driven with people. Right: dashboard-driven. Both use the motif to frame the composition."
     },
     "example_social_square": {
       "url": "https://brand.easypaydirect.com/assets/examples/example-social-square.png",
       "role": "positive_social_reference",
-      "description": "A finished 1:1 EPD ad with the side motif on the right, headline and CTA on the left, dashboard mockup on the right, and three green-check bullet points. Attach as a positive style reference for 1:1 social crops."
+      "description": "A finished 1:1 Easy Pay Direct ad with the side motif on the right, headline and CTA on the left, dashboard mockup on the right, and three green-check bullet points. Attach as a positive style reference for 1:1 social crops."
     },
     "motif_dos_and_donts": {
       "url": "https://brand.easypaydirect.com/assets/dos-and-donts/motif-dos-and-donts.png",
@@ -273,13 +273,15 @@
     "retired_phrases": [
       "AI runs the mechanics of your business",
       "The platform where AI runs the mechanics of your business",
-      "20+ Years"
+      "20+ Years",
+      "$12B+ Processed",
+      "EPD (as an abbreviation of Easy Pay Direct)"
     ],
     "locked_stats": [
       "100k Merchants Helped",
       "13+ Years",
       "500+ Integrations",
-      "$12B+ Processed",
+      "Billions Processed",
       "CSAT 6.45/7 (873 reviews)"
     ],
     "locked_ctas": {

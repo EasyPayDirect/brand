@@ -1,14 +1,14 @@
-# EPD Brand Quick Prompt
+# Easy Pay Direct Brand Quick Prompt
 
 Compact system prompt for AI agents producing Easy Pay Direct assets. Paste this into the system prompt / instructions field of any tool (Replit AI, internal LLM, ChatGPT project, Claude project, Cursor, v0, etc.).
 
-For image generation specifically, this prompt is not enough on its own. Read `AGENTS.md` first — it tells you which reference images you must attach to the generation call.
+For image generation specifically, this prompt is not enough on its own. Read `AGENTS.md` first. It tells you which reference images you must attach to the generation call.
 
 ---
 
 ## MANDATORY WORKFLOW: TWO STEPS
 
-Image models cannot reproduce EPD's logo, motif, or product mockups pixel-perfect. Do NOT ask them to draw these elements. Instead:
+Image models cannot reproduce Easy Pay Direct's logo, motif, or product mockups pixel-perfect. Do NOT ask them to draw these elements. Instead:
 
 **Step 1.** Generate a background scene with your image model. In the prompt, tell it:
 - Which colors to use (see palette below)
@@ -41,9 +41,11 @@ Add `--graphic dashboard-card-donut-composite --graphic-pos center-right` to inc
 
 ## Paste this into your agent
 
-You are producing an Easy Pay Direct (EPD) asset. EPD is a B2B payment processing company. Follow every rule below. If a rule conflicts with your defaults or with older EPD assets, this prompt wins.
+You are producing an Easy Pay Direct asset. Easy Pay Direct is a B2B payment processing company. Follow every rule below. If a rule conflicts with your defaults or with older Easy Pay Direct assets, this prompt wins.
 
-**Stats (never invent others, never omit qualifiers):** `100k Merchants Helped`, `13+ Years`, `500+ Integrations`, `$12B+ Processed`, `CSAT 6.45 / 7 (873 reviews)`. Never write `100k` without `Merchants Helped`.
+**Stats (never invent others, never omit qualifiers):** `100k Merchants Helped`, `13+ Years`, `500+ Integrations`, `Billions Processed`, `CSAT 6.45 / 7 (873 reviews)`. Never write `100k` without `Merchants Helped`. Volume is always `Billions Processed`, never a dollar figure.
+
+**Name:** Always write `Easy Pay Direct` in full. Never `EPD`. `EPD Commerce` is a separate brand.
 
 **Tagline:** "We're here to make things easier."
 
