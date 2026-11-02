@@ -45,7 +45,7 @@ You are producing an Easy Pay Direct asset. Easy Pay Direct is a B2B payment pro
 
 **Stats (never invent others, never omit qualifiers):** `100k Merchants Helped`, `13+ Years`, `500+ Integrations`, `Billions Processed`, `CSAT 6.45 / 7 (873 reviews)`. Never write `100k` without `Merchants Helped`. Volume is always `Billions Processed`, never a dollar figure.
 
-**Name:** Always write `Easy Pay Direct` in full. Never `EPD`. `EPD Commerce` is a separate brand.
+**Name:** Always write `Easy Pay Direct` in full, never shortened to `EPD`. `EPD` on its own means the umbrella team and ecosystem behind both Easy Pay Direct and EPD Commerce.
 
 **Tagline:** "We're here to make things easier."
 

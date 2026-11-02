@@ -154,7 +154,7 @@ Never ask the image model to draw the logo. Generate the background with the top
 - Never say "AI runs the mechanics of your business" (retired positioning).
 - When quoting stats, use the locked forms: "100k Merchants Helped", "13+ Years", "500+ Integrations", "Billions Processed".
 - Volume is always "Billions Processed". Never a dollar figure such as "$12B+" (retired).
-- Always write "Easy Pay Direct" in full. Never abbreviate it to "EPD". "EPD" only appears inside the logo mark and in "EPD Commerce", which is a separate brand.
+- Always write "Easy Pay Direct" in full. Never abbreviate it to "EPD". "EPD" on its own is the umbrella for the team and ecosystem behind both Easy Pay Direct and EPD Commerce (for example "the EPD ecosystem"). Never use it as shorthand when you mean Easy Pay Direct specifically.
 
 ## Templates over generation, where possible
 
